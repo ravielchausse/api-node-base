@@ -52,7 +52,7 @@ UserSchema.method({
 
     create (attributes, callback) {
         try {
-            return this.model('User').create(attributes).exec();
+            return this.model('User').create(attributes);
         } catch (e) {
             throw new Error(e.message);
         }
