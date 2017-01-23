@@ -4,9 +4,15 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-	<title>Error 500</title>
+    <link href="/css/error.css" rel="stylesheet" type="text/css" media="all"/>
+    <title>Error 500</title>
 </head>
 <body>
-	<p class="alert alert-danger">Um erro aconteceu :(. O nosso time está correndo para corrigir!</p>
+    <div class="error">
+        <div class="alert alert-danger">
+            <strong>Opsss...</strong>
+            <%= (message) ? message : 'Um erro aconteceu :(. O nosso time está correndo para corrigir!' %>
+        </div>
+    </div>
 </body>
 </html>

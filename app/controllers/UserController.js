@@ -11,7 +11,6 @@ module.exports = (app) => {
         try {
             model.getAll()
             .then( (users) => {
-                // return res.status(202).json(users);
                 return res.status(202).render('user/list', { users: users });
             })
             .catch( (error) => {
@@ -31,12 +30,12 @@ module.exports = (app) => {
 
             model.getById(id)
                 .then( (user) => {
-                    // return res.status(202).json(user);
                     return res.status(202).render('user/list', { users: [user] });
                 })
                 .catch( (error) => {
                     logger.error(error.message);
-                    return res.status(500).end(error.message);
+                    // return res.status(500).end(error.message);
+                    return res.status(500).render('errors/500', {message: error.message});
                 });
         } catch (e) {
             logger.error(e.message);
