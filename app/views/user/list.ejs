@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <title>Listando os Usuários</title>
 </head>
@@ -12,9 +13,9 @@
             <th>#</th>
             <th>Nome</th>
             <th>Login</th>
-            <th>E-mail</th>
             <th>Telefone</th>
             <th>Celular</th>
+            <th>E-mail</th>
         </tr>
     </thead>
     <tbody>
@@ -23,9 +24,9 @@
             <th scope="row"><%= (i + 1) %></th>
             <td><%= users[i].userName %></td>
             <td><%= users[i].userLogin %></td>
-            <td><%= users[i].userEmail %></td>
             <td><%= users[i].userPhone %></td>
             <td><%= users[i].userCellPhone %></td>
+            <td><%= users[i].userEmail %></td>
         </tr>
         <%}%>
     </tbody>
